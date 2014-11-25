@@ -28,7 +28,8 @@ var router = express.Router();
 // middelware to use for all requests
 router.use(function(req, res, next){
     // do logging
-    console.log('Something is happening');
+    console.log('performed a ' + req.method + " request to url: " + req.url);
+    //console.log(req.method)
     next(); // make sure to go to the next routes, don't stop here!
 })
 
